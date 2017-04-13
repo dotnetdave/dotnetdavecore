@@ -2,4 +2,5 @@ bin/Debug/
 obj/Debug/
 obj/
 .vscode/
-node_modules
+node_modules/
+dist

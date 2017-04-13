@@ -4,13 +4,14 @@
   "description": "New .Net core site using Nancy DryIoc and other fun",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "jquery": "^3.2.1",
     "knockout": "^3.4.2"
   },
   "devDependencies": {
-    "webpack": "^2.3.3"
+      "gulp": "^3.9.1",
+    "webpack": "^2.3.3",
+    "webpack-chunk-hash": "^0.4.0"
   },
   "scripts": {
     "build": "webpack"

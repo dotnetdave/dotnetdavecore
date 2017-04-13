@@ -12,7 +12,5 @@
     <PackageReference Include="Nancy" Version="2.0.0-clinteastwood"/>
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="1.1.1"/>
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="*"/>
-
-    
   </ItemGroup>
 </Project>

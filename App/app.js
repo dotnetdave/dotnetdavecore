@@ -7,4 +7,4 @@ var app = {};
 
 alert(app);
 
-})(jQuery)
+})($)
