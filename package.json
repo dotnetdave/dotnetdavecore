@@ -1,0 +1,27 @@
+{
+  "name": "dotnetdavecore",
+  "version": "1.0.0",
+  "description": "New .Net core site using Nancy DryIoc and other fun",
+  "main": "index.js",
+  "dependencies": {
+     "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "knockout": "^3.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotnetdave/dotnetdavecore.git"
+  },
+  "author": "dotnetdave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotnetdave/dotnetdavecore/issues"
+  },
+  "homepage": "https://github.com/dotnetdave/dotnetdavecore#readme"
+}

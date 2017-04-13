@@ -26,7 +26,7 @@ namespace dotnetdaveCore
         protected override void ConfigureApplicationContainer(IContainer existingContainer)
         {
             // Perform registation that should have an application lifetime
-            existingContainer.Register<IGreetingService, HardCodedGreetingService>(Reuse.Singleton);
+            existingContainer.Register<IGreetingService, FancyGreetingService>(Reuse.Singleton);
             existingContainer.Register<INameFinder, RandomNameFinder>(Reuse.Transient);
             existingContainer.Register<IHelloFinder, MyHelloFinder>(Reuse.Transient);
         }

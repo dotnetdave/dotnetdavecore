@@ -11,6 +11,7 @@ namespace dotnetdaveCore.NancyModules
             {
                 dynamic indexModel = new ExpandoObject();
                 indexModel.Hello = greeter.SayHello();
+                indexModel.GoodBye = greeter.SayGoodbye();
                 return View["index.html", indexModel];
             });
         }

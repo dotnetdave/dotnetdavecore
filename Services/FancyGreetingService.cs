@@ -7,18 +7,19 @@ namespace dotnetdaveCore
 
         public FancyGreetingService(INameFinder namefinder, IHelloFinder helloFinder)
         {
-                this.namefinder = namefinder;
-                this.helloFinder = helloFinder;
+            this.namefinder = namefinder;
+            this.helloFinder = helloFinder;
         }
-
-        public string SayGoodbye()
-        {
-           return $"See ya {namefinder.GetName()}";
-        }
-
+        
         public string SayHello()
         {
             return $"{helloFinder.GetHello()} {namefinder.GetName()}";
         }
+
+        public string SayGoodbye()
+        {
+            return $"See ya {namefinder.GetName()}";
+        }
+
     }
 }
