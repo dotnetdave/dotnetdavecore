@@ -1,5 +1,6 @@
 using Nancy;
 using Nancy.Configuration;
+using Nancy.Conventions;
 using Nancy.Bootstrapper;
 using Nancy.Bootstrappers.DryIoc;
 using DryIoc;
@@ -40,6 +41,15 @@ namespace dotnetdaveCore
         {
             // No registrations should be performed in here, however you may
             // resolve things that are needed during request startup.
+        }
+
+        protected override void ConfigureConventions(NancyConventions conventions)
+        {
+            base.ConfigureConventions(conventions);
+
+            conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddDirectory("dist", @"dist")
+            );
         }
     }
 }

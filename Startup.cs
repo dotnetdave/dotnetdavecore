@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using DryIoc;
-using DryIoc.Microsoft.DependencyInjection;
 using Nancy.Owin;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace dotnetdaveCore
 {
@@ -28,6 +27,13 @@ namespace dotnetdaveCore
 
             app.UseOwin(x => x.UseNancy());
 
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), @"dist")),
+                RequestPath = new PathString("/dist")
+            });
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
